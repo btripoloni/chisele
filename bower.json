@@ -4,10 +4,10 @@
   "authors": [
     "bruno_tripoloni <bruno.tripoloni@gmail.com>"
   ],
-  "keyords":[
-    'Polymer',
-    'web-components',
-    'autocomplete'
+  "keywords":[
+    "Polymer",
+    "web-components",
+    "autocomplete"
   ],
   "description": "A simple autocomplete web component",
   "license": "MIT",
