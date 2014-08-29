@@ -8,7 +8,7 @@
     'Polymer',
     'web-components',
     'autocomplete'
-  ]
+  ],
   "description": "A simple autocomplete web component",
   "license": "MIT",
   "homepage": "https://github.com/btripoloni/chisele",
