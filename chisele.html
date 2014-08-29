@@ -1,0 +1,59 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="microajax.minified.js"></script>
+<script src="chisele.js"></script>
+
+
+<polymer-element name="chi-sele" attributes="local placeholder remote filds root class" >
+  <template>
+    <!--<style>
+      #chiseleResults {
+        position: absolute;
+        background-color: #fff;
+        border: 1px #888 solid;
+      }
+      
+      #chiseleResults p{
+        padding: 0px;
+        margin: 0px;
+        cursor: default;
+      }
+    </style>-->
+    <!--<link rel="stylesheet" href="chisele.css">-->
+    <input id="form" value="{{ sValue }}" on-keyup="{{ keypress }}" placeholder="{{ placeholder }}" class="{{ class }}" on-blur="{{ blur }}" />
+    <template if="{{ open }}">
+      <div id="chiseleResults" style="">
+        <template repeat="{{ suggestions }}">
+          <p on-tap="{{ toInput }}">
+            {{ name }}
+          </p>
+        </template>
+      </div>
+    </template>
+  </template>
+
+  <script>
+    var sander;
+    Polymer('chi-sele',{
+      local: [],
+      remote: '',
+      root: null,
+      open: false,
+      keypress: function(){
+        this.open = true;
+        this.suggestions = searchSuggestions(this.local, this.sValue, this.filds, this.remote, this.root);
+      },
+      toInput: function(event,detail,sender){
+        this.sValue = sender.innerHTML.trim();
+        //this.suggestions = null;
+        this.open = false;
+      },
+      blur: function(){
+        var h = this;
+        window.setTimeout(function(){
+          h.open = false;
+        }, 100);
+      }
+    });
+
+  </script>
+</polymer-element>
