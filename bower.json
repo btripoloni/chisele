@@ -17,9 +17,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "polymer": "polymer/polymer#~0.3.5",
-    "jquery": "~2.1.1",
-    "core-ajax": "polymer/core-ajax#~0.3.5",
-    "polymer-jsonp": "polymer/polymer-jsonp#~0.3.0"
+    "polymer": "polymer/polymer#~0.3.5"
   }
 }
