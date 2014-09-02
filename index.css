@@ -1,0 +1,31 @@
+@font-face{
+  font-family:"CheddarJack";
+  src: local("CheddarJack"), url("CheddarJack.ttf");
+}
+.cheddarJack {
+  font-family: "CheddarJack";
+}
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: block;
+  background-image: url("space.jpg");
+  background-size: cover;
+  /*margin-top: -20px;
+  padding-bottom: 20px;*/
+  color: #fff;
+  height: 100%;
+  padding-top: 10%;
+}
+
+header h1 {
+  font-family: "CheddarJack";
+  font-size: 150px;
+  margin-bottom: -40px;
+}
+
+.pages {
+  min-height: 100%;
+}
