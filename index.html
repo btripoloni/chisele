@@ -5,83 +5,70 @@
     <link rel="import" href="bower_components/chisele/chisele.html">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/prismjs/prism.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Chisele</h1>
-        <h4>Beta</h4>
-        <h3>A simple autocomplete web component.</h3>
-      </header>
-      <div class="text-center">
-        <h1>Simple and Easy</h1>
-        <h4>Chisele foi feito para agilizar seu trabalho.</h4>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2 class="text-center">Veja você mesmo.</h2>
-          <chi-sele local="['Brazil','Germany']" input-class="form-control" css="bower_components/bootstrap/dist/css/bootstrap.min.css"></chi-sele>
+    <header>
+      <div id="container">
+        <h1 class="text-center">Chisele</h1>
+        <h3 class="text-center">A simple autocomplete web component.</h3>
+        <div class="row demo">
+          <div class="col-md-6 col-md-offset-3">
+            <h2 class="text-center cheddarJack">Try!</h2>
+            <chi-sele id="chisele" local="['Brazil','Germany']" input-class="form-control" css="bower_components/bootstrap/dist/css/bootstrap.min.css"></chi-sele>
+          </div>
         </div>
       </div>
-      <div>
+    </header>
+    <div class="container">
+      <div class="pages">
+        <div class="text-center">
+          <h1>Simple and Easy</h1>
+          <h4>Chisele foi feito para agilizar seu trabalho.</h4>
+        </div>
+        
+      </div>
+      <div class="pages">
         <h1>Como usar.</h1>
         <br>    
         <h4>Instale Chisele via Bower</h4>
         <div style="background-color: #000;padding: 15px;color: #fff;border-radius: 5px;">
           $ bower install chisele --save
         </div>
-        <br>
         <h4>Insira plataform.js no html.</h4>
-        <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"&gt;&lt;/script&gt;</code></pre>
-        <br>
+        <!--<pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"&gt;&lt;/script&gt;</code></pre>-->
+        <script src="https://gist.github.com/btripoloni/75d94d2025f57ac7d339.js"></script>
+        
         <h4>Importe Chisele</h4>
-        <pre><code class="language-markup">&lt;link rel="import" href="bower_components/chisele/chisele.html" &gt;</code></pre>
+        <script src="https://gist.github.com/btripoloni/91f8007aa95b89500a0f.js"></script>
         <h4>Por fim use a tag</h4>
-        <pre><code class="language-markup">&lt;chi-sele&gt;&lt;/chi-sele&gt;</code></pre>
+        <script src="https://gist.github.com/btripoloni/2a759dd39c4461f91a8d.js"></script>
       </div>
-      <div>
+      <div class="pages">
         <h1>Opções</h1>
-        <br>
         
         <h4>Local</h4>
         <p>Você pode usar a opcão <b>local</b> para passar uma simples array de dados para o autocomplete.</p>
-        <pre><code class="language-markup">&lt;chi-sele local="['Brazil','Germany','Japan']"&gt;&lt;/chi-sele&gt;</code></pre>
-        <br>
+        <script src="https://gist.github.com/btripoloni/f6c880565aaf94936370.js"></script>
         
         <h4>Remote</h4>
         <p>Use a opção <b>remote</b> para passar uma url para pegar os dados.</p>
-        <pre><code class="language-markup">&lt;chi-sele remote="http://urltofetch.com/autocomplete/"&gt;&lt;/chi-sele&gt;</code></pre>
-        <span><b style="color:red;">*</b> Ao usar o remote o local e automaticamente desativado</span>
-        <span><b style="color:red;">**</b> Chisele usa somente <b>JSON</b>.</span>
-        <br>
+        <script src="https://gist.github.com/btripoloni/6ed50285783b48ced57a.js"></script>
+        <p><b style="color:red;">*</b> Ao usar o remote o local e automaticamente desativado</p>
+        <p><b style="color:red;">*</b> Chisele usa somente <b>JSON</b>.</p>
         
         <h4>Root</h4>
         <p>Se o JSON tiver um elemento Root ele deve ser definido.</p>
-        <pre>
-<code class="language-javascript">
-{
-  "results": [
-    {"name": "Jonh"},
-    {"name": "Bruno"},
-    {"name": "Jessica"}
-  ],
-  "message": "ok"
-}</code></pre>
-        <pre><code class="language-markup">&lt;chi-sele remote="http://urltofetch.com/autocomplete/" root="results" &gt;&lt;/chi-sele&gt;</code></pre>
-        <br>
+        <script src="https://gist.github.com/btripoloni/6ef26c52b6cc5638715f.js"></script>
+        <script src="https://gist.github.com/btripoloni/08743d6ed4d4a87447a0.js"></script>
         
         <h4>Filds</h4>
         <p>Para mostrar as sugestões e nessesario escolher um elemento neste caso é <code>name</code></p>
-        <pre><code class="language-markup">&lt;chi-sele remote="http://urltofetch.com/autocomplete/" root="results" filds="name" &gt;&lt;/chi-sele&gt;</code></pre>
+        <script src="https://gist.github.com/btripoloni/a8c4ce7912f744020d66.js"></script>
         <span><b style="color:red;">*</b> Você pode adicionar mais de um fild e so usar "," para separar.</span>
-          
       </div>
-      <div>
-        <h1>Usando css</h1>
-        <p>Uma demostração pode explicar isso muito bem.</p>
-        <pre><code class="language-css">body /deep/ .chiseleInput{
-          
-        }</code></pre>
+      <div class="pages">
+        <h1>usando css</h1>
       </div>
     </div>
     <script src="bower_components/prismjs/prism.js"></script>
