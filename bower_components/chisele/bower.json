@@ -1,0 +1,22 @@
+{
+  "name": "chisele",
+  "version": "0.0.2",
+  "authors": [
+    "bruno_tripoloni <bruno.tripoloni@gmail.com>"
+  ],
+  "keywords":[
+    "Polymer",
+    "web-components",
+    "autocomplete"
+  ],
+  "description": "A simple autocomplete web component",
+  "license": "MIT",
+  "homepage": "https://github.com/btripoloni/chisele",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer#0.4.0"
+  }
+}
