@@ -1,3 +1,32 @@
-.demo /deep/ #chisele{
+#chisele::shadow input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  font-family: arial;
+  font-size: 20px;
+}
+
+#chisele::shadow input:focus {
+  border: 2px solid rgba(216, 0, 255, 0.69);
+}
+
+#chisele::shadow #chiseleResults {
+  background-color: #fff;
+  position: absolute;
+  color: #000;
+  width: 95%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#chisele::shadow #chiseleResults p {
+  padding: 3px;
+  margin: 0px;
+  font-size: 15px;
   
+}
+
+#chisele::shadow #chiseleResults p:hover {
+  background-color: #00a8d1;
+  padding: 3px;
 }

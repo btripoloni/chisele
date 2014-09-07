@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #eaeaea;
+  padding-bottom: 30px;
+}
+
 header {
   display: block;
   background-image: url("space.jpg");
@@ -16,8 +21,7 @@ header {
   /*margin-top: -20px;
   padding-bottom: 20px;*/
   color: #fff;
-  height: 100%;
-  padding-top: 10%;
+  padding: 30px;
 }
 
 header h1 {
@@ -28,4 +32,17 @@ header h1 {
 
 .pages {
   min-height: 100%;
+}
+
+.pages h4 {
+  margin-top: 30px;
+}
+.down {
+  color: #fff;
+  font-size: 80px;
+  padding-top: 100px;
+}
+
+.down:hover{
+  color: #d3d3d3;
 }
