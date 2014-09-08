@@ -27,6 +27,5 @@
   },
   "_source": "git://github.com/btripoloni/chisele.git",
   "_target": "~0.0.2",
-  "_originalSource": "chisele",
-  "_direct": true
+  "_originalSource": "chisele"
 }
