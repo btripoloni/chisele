@@ -4,7 +4,7 @@
   "authors": [
     "bruno_tripoloni <bruno.tripoloni@gmail.com>"
   ],
-  "keywords":[
+  "keywords": [
     "Polymer",
     "web-components",
     "autocomplete"
@@ -17,6 +17,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "polymer": "polymer/polymer#0.4.0"
+    "polymer": "polymer/polymer#0.4.0",
+    "microajax": "~0.3.0"
   }
 }
