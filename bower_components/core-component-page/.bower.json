@@ -14,6 +14,6 @@
     "commit": "b105e85252bc3dd521601d2d73b09d150c7c2b53"
   },
   "_source": "git://github.com/Polymer/core-component-page.git",
-  "_target": ">=0.4.0 <1.0.0",
+  "_target": ">=0.3.0 <1.0.0",
   "_originalSource": "Polymer/core-component-page"
 }

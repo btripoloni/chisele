@@ -1,6 +1,6 @@
 {
   "name": "chisele",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "bruno_tripoloni <bruno.tripoloni@gmail.com>"
   ],
@@ -17,13 +17,14 @@
     "bower_components"
   ],
   "dependencies": {
-    "polymer": "polymer/polymer#0.4.0"
+    "polymer": "polymer/polymer#0.4.0",
+    "microajax": "~0.3.0"
   },
-  "_release": "0.0.2",
+  "_release": "0.0.3",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.2",
-    "commit": "b245c44db73a68b2fdd2b9cb53371204c642e25d"
+    "tag": "0.0.3",
+    "commit": "2930584a1c881c0d099451579f922a11eec16845"
   },
   "_source": "git://github.com/btripoloni/chisele.git",
   "_target": "~0.0.2",

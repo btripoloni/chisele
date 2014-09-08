@@ -11,8 +11,8 @@ var searchLocal = function (data, wordSearch) {
     json;
 
   while (i < data.length) {
-    word = data[i];
-    if (word.search(wordSearch) !== -1) {
+    word = data[i].toLowerCase();
+    if (word.search(wordSearch.toLowerCase()) !== -1) {
       json = {name: data[i]};
       wordList.push(json);
     }
@@ -53,9 +53,9 @@ var searchIntroJson = function (dataUrl, root, keyList, wordSearch) {
         suggestionName.push(data[i][k]);
       }
 
-      value = suggestionName.join(' ');
+      value = suggestionName.join(' ').toLowerCase();
 
-      if (value.search(wordSearch) !== -1) {
+      if (value.search(wordSearch.toLowerCase()) !== -1) {
         json = {
           name: value,
           originalData: data[i]
