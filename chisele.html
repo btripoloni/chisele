@@ -5,20 +5,6 @@
 
 <polymer-element name="chi-sele" attributes="local placeholder remote filds root class" >
   <template>
-    <!--<style>
-      #chiseleResults {
-        position: absolute;
-        background-color: #fff;
-        border: 1px #888 solid;
-      }
-      
-      #chiseleResults p{
-        padding: 0px;
-        margin: 0px;
-        cursor: default;
-      }
-    </style>-->
-    <!--<link rel="stylesheet" href="chisele.css">-->
     <input id="form" value="{{ sValue }}" on-keyup="{{ keypress }}" placeholder="{{ placeholder }}" class="{{ class }}" on-blur="{{ blur }}" />
     <template if="{{ open }}">
       <div id="chiseleResults" style="">
