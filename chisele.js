@@ -33,9 +33,10 @@ var searchIntroJson = function (dataUrl, root, keyList, wordSearch) {
     word,
     json,
     x = 0,
-    suggestionName = [],
+    suggestionNames = [],
     value,
-    data = [];
+    data = [],
+    suggestion;
 
   microAjax(dataUrl, function (json) {
     data = JSON.parse(json);
@@ -45,19 +46,20 @@ var searchIntroJson = function (dataUrl, root, keyList, wordSearch) {
     }
 
     while (i < data.length) {
-      suggestionName = [];
+      suggestionNames = [];
       value = '';
 
       for (x = 0; x < keyList.length; x++) {
         k = keyList[x];
-        suggestionName.push(data[i][k]);
+        suggestionNames.push(data[i][k]);
       }
 
-      value = suggestionName.join(' ').toLowerCase();
+      value = suggestionNames.join(' ').toLowerCase();
+      suggestion = suggestionNames.join(' ');
 
       if (value.search(wordSearch.toLowerCase()) !== -1) {
         json = {
-          name: value,
+          name: suggestion,
           originalData: data[i]
         };
         wordList.push(json);
@@ -80,7 +82,7 @@ var searchRemote = function (data, wordSearch, key, url, root) {
     keyList,
     x = 0,
     k,
-    suggestionName = [],
+    suggestionNames = [],
     value,
     data = [],
     dataUrl;
